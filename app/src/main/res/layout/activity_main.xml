@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/n2TextField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="70dp"
+        android:ems="10"
+        android:hint="enter num"
+        app:layout_constraintBottom_toBottomOf="@+id/addButton"
+        app:layout_constraintEnd_toStartOf="@+id/n1TextField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/n1TextField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="114dp"
+        android:ems="10"
+        android:hint="Enter num"
+        app:layout_constraintBottom_toTopOf="@+id/divButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/n2TextField"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="Calculator App"
+        app:layout_constraintStart_toEndOf="@+id/n2TextField"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addOnClick"
+        android:text="add"
+        app:layout_constraintBottom_toBottomOf="@+id/multButton"
+        app:layout_constraintStart_toStartOf="@+id/n2TextField"
+        app:layout_constraintTop_toTopOf="@+id/multButton" />
+
+    <Button
+        android:id="@+id/divButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:onClick="divOnClick"
+        android:text="divide"
+        app:layout_constraintStart_toStartOf="@+id/multButton"
+        app:layout_constraintTop_toBottomOf="@+id/multButton" />
+
+    <Button
+        android:id="@+id/multButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="189dp"
+        android:onClick="multOnClick"
+        android:text="multiply"
+        app:layout_constraintStart_toStartOf="@+id/n1TextField"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:onClick="subtractOnClick"
+        android:text="subtract"
+        app:layout_constraintStart_toStartOf="@+id/addButton"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
